@@ -8,11 +8,13 @@
 	import Navbar from '$lib/components/modules/Navbar.svelte';
 	import NearbyConnectivity from '$lib/components/modules/NearbyConnectivity.svelte';
 	import PriceSection from '$lib/components/modules/PriceSection.svelte';
+	import Pricing from '$lib/components/modules/Pricing.svelte';
 </script>
 
 <div class="flex flex-col relative">
 	<Navbar />
     <LandingPage/>
+    <Pricing/>
 	<AboutUs />
 	<Highlights />
 	<PriceSection />
