@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import AboutUs from "$lib/components/modules/AboutUs.svelte";
+	import Highlights from "$lib/components/modules/Highlights.svelte";
+	import PriceSection from "$lib/components/modules/PriceSection.svelte";
+
+</script>
+<AboutUs/>
+<Highlights/>
+<PriceSection/>
