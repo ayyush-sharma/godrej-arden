@@ -1,6 +1,7 @@
 <script>
 	import AboutUs from '$lib/components/modules/AboutUs.svelte';
 	import Amenities from '$lib/components/modules/Amenities.svelte';
+	import FooterAbout from '$lib/components/modules/FooterAbout.svelte';
 	import Gallery from '$lib/components/modules/Gallery.svelte';
 	import Highlights from '$lib/components/modules/Highlights.svelte';
 	import LandingPage from '$lib/components/modules/LandingPage.svelte';
@@ -18,4 +19,5 @@
     <Amenities/>
     <Gallery/>
     <NearbyConnectivity/>
+    <FooterAbout/>
 </div>
