@@ -11,7 +11,7 @@
 	import Pricing from '$lib/components/modules/Pricing.svelte';
 </script>
 
-<div class="flex flex-col relative">
+<div class="flex flex-col w-full min-h-screen overflow-x-hidden relative">
 	<Navbar />
     <LandingPage/>
     <Pricing/>

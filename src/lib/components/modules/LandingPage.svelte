@@ -5,7 +5,7 @@
 	const goldColor = '#B18E4E';
 </script>
 
-<section class="relative w-full min-h-[80vh] flex items-center bg-gray-900 overflow-hidden mt-10">
+<section class="relative w-full min-h-[80vh] flex items-center bg-gray-900 overflow-hidden">
 
 	<div 
 		class="absolute inset-0 z-0 w-full h-full bg-cover bg-center bg-no-repeat"
