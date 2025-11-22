@@ -14,16 +14,16 @@
 
 	<div class="absolute inset-0 z-0 bg-gradient-to-t from-black/90 via-black/70 to-black/30 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/60 lg:to-transparent"></div>
 
-	<div class="container relative z-10 mx-auto px-4 py-12 lg:py-20">
+	<div class="container relative z-10 mx-auto px-4 py-12 pt-[100px] lg:py-20">
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 			
 			<div class="lg:col-span-7 flex flex-col gap-6 text-center lg:text-left">
 				
 				<div class="space-y-2">
-					<span class="inline-block py-1 px-3 rounded bg-white/10 backdrop-blur-md text-[#B18E4E] font-bold tracking-wider text-sm uppercase border border-[#B18E4E]/30">
+					<span class="inline-block py-1 px-3 rounded bg-white/10 backdrop-blur-md text-white lg:text-[#B18E4E] font-bold tracking-wider text-sm uppercase border border-[#B18E4E]/30">
 						At Sigma 3, Greater Noida
 					</span>
-					<h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
+					<h1 class="text-5xl lg:text-7xl font-bold text-white leading-tight">
 						Godrej <span class="text-[#B18E4E]">Arden</span>
 					</h1>
 				</div>
