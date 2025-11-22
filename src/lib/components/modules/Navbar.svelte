@@ -57,7 +57,7 @@
 			<img
 				src="https://www.godrejardensigma3noida.com/assets/img/logo.svg"
 				alt="Logo"
-				class="h-10 md:h-12 brightness-0 invert"
+				class="h-8 md:h-12 brightness-0 invert"
 			/>
 		</a>
 

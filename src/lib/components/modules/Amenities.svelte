@@ -28,13 +28,13 @@
 		{
 			name: 'Basketball Court',
 			image:
-				'https://images.unsplash.com/photo-1505666287802-93144bf0980b?auto=format&fit=crop&q=80&w=800',
+				'https://media.istockphoto.com/id/1455699610/photo/public-basketball-court-mersin-turkey.jpg?s=612x612&w=0&k=20&c=zLoH3Eca0z7C1zuMo6bUsGCoY1c4Tzc-G4UypXGfSRI=',
 			desc: 'Full size professional court'
 		},
 		{
 			name: 'Indoor Games Zone',
 			image:
-				'https://images.unsplash.com/photo-1606166325683-e6eb69d20660?auto=format&fit=crop&q=80&w=800',
+				'https://www.heiwaheaven.com/images/game/2.jpg',
 			desc: 'Billiards, Table Tennis & Foosball'
 		},
 		{
@@ -46,7 +46,7 @@
 		{
 			name: 'Multipurpose Court',
 			image:
-				'https://images.unsplash.com/photo-1587329314163-37cf24aaf63e?auto=format&fit=crop&q=80&w=800',
+				'https://content.jdmagicbox.com/v2/comp/delhi/m8/011pxx11.xx11.220415171009.f3m8/catalogue/dda-tennis-court-vasant-kunj-sector-d-delhi-lawn-tennis-courts-wRma3ayGeM.jpg',
 			desc: 'Tennis & Badminton ready'
 		}
 	];

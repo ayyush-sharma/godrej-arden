@@ -17,7 +17,7 @@
     <Pricing/>
 	<AboutUs />
 	<Highlights />
-	<PriceSection />
+	<!-- <PriceSection /> -->
     <Amenities/>
     <Gallery/>
     <NearbyConnectivity/>
