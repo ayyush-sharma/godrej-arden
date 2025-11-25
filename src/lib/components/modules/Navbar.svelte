@@ -21,7 +21,7 @@
 		{ name: 'Location', href: '#location' }
 	];
 
-	const phoneNumber = '+91 98765 43210';
+	const phoneNumber = '+91 99587 20207';
 
 	// Handle Scroll to change navbar background
 	function handleScroll() {
