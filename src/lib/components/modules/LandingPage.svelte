@@ -1,9 +1,14 @@
 <script>
+	import { onMount } from 'svelte';
 	import GeneralModal from '../modals/GeneralModal.svelte';
 
-	// Optional: Define the gold color as a constant or use tailwind config
 	const goldColor = '#B18E4E';
 	let openModal = $state(false);
+	onMount(()=>{
+		setTimeout(()=>{
+			openModal = true;
+		},5000)
+	})
 </script>
 
 <section class="relative w-full min-h-[80vh] flex items-center bg-gray-900 overflow-hidden">

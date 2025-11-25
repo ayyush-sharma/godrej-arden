@@ -80,13 +80,13 @@
 </script>
 
 <nav
-	class={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent 
+	class={`fixed top-0 left-0 w-full z-100 transition-all duration-300 border-b border-transparent 
 	${isScrolled ? 'bg-black/80 backdrop-blur-md py-3 border-white/10 shadow-2xl' : 'bg-transparent py-5'}`}
 >
 	<div class="container mx-auto px-4 flex justify-between items-center">
 		<a href="#" class="relative z-50">
 			<img
-				src="https://www.godrejardensigma3noida.com/assets/img/logo.svg"
+				src="/logo/logo.svg"
 				alt="Logo"
 				class="h-8 md:h-12 brightness-0 invert"
 			/>
@@ -114,7 +114,7 @@
 
 		<button
 			onclick={toggleMenu}
-			class="md:hidden relative z-50 text-white focus:outline-none"
+			class="md:hidden relative z-100 text-white focus:outline-none"
 			aria-label="Toggle Menu"
 		>
 			{#if isMenuOpen}
@@ -152,13 +152,13 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
-		class="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 md:hidden"
+		class="fixed inset-0 bg-black/80 backdrop-blur-sm z-90 md:hidden"
 		onclick={closeMenu}
 		transition:fade={{ duration: 200 }}
 	></div>
 
 	<div
-		class="fixed top-0 right-0 h-full w-[80%] max-w-[300px] bg-[#0F0F0F] border-l border-white/10 z-40 shadow-2xl flex flex-col justify-between md:hidden"
+		class="fixed top-0 right-0 h-full w-[80%] max-w-[300px] bg-[#0F0F0F] border-l border-white/10 z-90 shadow-2xl flex flex-col justify-between md:hidden"
 		transition:fly={{ x: 300, duration: 300 }}
 	>
 		<div class="p-8 pt-24">
