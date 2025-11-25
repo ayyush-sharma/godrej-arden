@@ -26,7 +26,7 @@
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24">
 			<div class="space-y-8">
 				<img
-					src="https://www.godrejardensigma3noida.com/assets/img/logo.svg"
+					src="/logo/logo.svg"
 					alt="Godrej Properties Logo"
 					class="h-12 brightness-0 invert opacity-90"
 				/>
