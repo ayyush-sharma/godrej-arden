@@ -1,4 +1,6 @@
 <script>
+	import GeneralModal from "../modals/GeneralModal.svelte";
+
 	// Connectivity Data
 	const connectivityPoints = [
 		{
@@ -42,6 +44,7 @@
 				'M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z'
 		}
 	];
+	let openModal = $state(false);
 </script>
 
 <section class="py-24 bg-[#0f0f0f] relative overflow-hidden">
@@ -52,11 +55,16 @@
 	<div class="container mx-auto px-4">
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 			<div class="lg:col-span-7">
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div
+				onclick={() => {
+					openModal = true;
+				}}
 					class="relative group rounded-3xl overflow-hidden border border-white/10 shadow-2xl h-[400px] lg:h-[600px]"
 				>
 					<img
-						src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1600"
+						src="/map.png"
 						alt="Location Map"
 						class="w-full h-full object-cover opacity-60 blur-[2px] scale-105 transition-transform duration-700 group-hover:scale-100 group-hover:blur-0"
 					/>
@@ -90,6 +98,9 @@
 
 					<div class="absolute bottom-8 left-0 right-0 flex justify-center">
 						<button
+							onclick={() => {
+								openModal = true;
+							}}
 							class="bg-white text-black hover:bg-[#B18E4E] hover:text-white font-bold py-3 px-8 rounded-full shadow-xl transition-colors duration-300 flex items-center gap-2"
 						>
 							<svg
@@ -169,3 +180,13 @@
 		</div>
 	</div>
 </section>
+
+
+{#if openModal}
+	<GeneralModal
+		isOverlay={true}
+		onClose={() => {
+			openModal = false;
+		}}
+	/>
+{/if}

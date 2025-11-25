@@ -23,7 +23,7 @@
 			suffix: 'Onwards'
 		}
 	];
-	let openModal=$state(false);
+	let openModal = $state(false);
 </script>
 
 <section class="py-24 bg-[#0a0a0a] relative border-t border-white/5">
@@ -52,8 +52,8 @@
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div
 					class="group relative bg-white/5 border border-white/10 hover:border-[#B18E4E]/50 rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[#B18E4E]/10 flex flex-col items-center"
-					onclick={()=>{
-						openModal=true;
+					onclick={() => {
+						openModal = true;
 					}}
 				>
 					<!-- Header -->
@@ -102,7 +102,10 @@
 	</div>
 </section>
 {#if openModal}
-<GeneralModal
-isOverlay={true}
-onClose={()=>{openModal=false;}}/>
+	<GeneralModal
+		isOverlay={true}
+		onClose={() => {
+			openModal = false;
+		}}
+	/>
 {/if}
