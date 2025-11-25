@@ -13,13 +13,31 @@
 
 <div class="flex flex-col w-full min-h-screen overflow-x-hidden relative">
 	<Navbar />
-    <LandingPage/>
-    <Pricing/>
-	<AboutUs />
-	<Highlights />
-	<!-- <PriceSection /> -->
-    <Amenities/>
-    <Gallery/>
-    <NearbyConnectivity/>
-    <FooterAbout/>
+	<section id="home">
+		<LandingPage />
+	</section>
+
+	<section id="pricing">
+		<Pricing />
+	</section>
+
+	<!-- <section id="overview">
+        <AboutUs />
+        <Highlights />
+    </section> -->
+
+	<section id="amenities">
+		<Amenities />
+	</section>
+
+	<section id="gallery">
+		<Gallery />
+	</section>
+
+	<section id="location">
+		<NearbyConnectivity />
+	</section>
+	<section id="about">
+		<FooterAbout />
+	</section>
 </div>

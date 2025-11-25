@@ -1,3 +1,7 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
+}

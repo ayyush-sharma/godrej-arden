@@ -12,7 +12,7 @@
 		style="background-image: url('https://www.godrejardensigma3noida.com/assets/img/deskban2.webp');"
 	></div>
 
-	<div class="absolute inset-0 z-0 bg-gradient-to-t from-black/90 via-black/70 to-black/30 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/60 lg:to-transparent"></div>
+	<div class="absolute inset-0 z-0 bg-linear-to-t from-black/70 via-black/50 to-black/10 lg:bg-linear-to-r lg:from-black/70 lg:via-black/30 lg:to-transparent"></div>
 
 	<div class="container relative z-10 mx-auto px-4 py-12 pt-[100px] lg:py-20">
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -20,15 +20,15 @@
 			<div class="lg:col-span-7 flex flex-col gap-6 text-center lg:text-left">
 				
 				<div class="space-y-2">
-					<span class="inline-block py-1 px-3 rounded bg-white/10 backdrop-blur-md text-white lg:text-[#B18E4E] font-bold tracking-wider text-sm uppercase border border-[#B18E4E]/30">
+					<span class="inline-block py-1 px-3 rounded bg-white/10 backdrop-blur-sm text-white lg:text-[#B18E4E] font-bold tracking-wider text-sm uppercase border border-[#B18E4E]/30">
 						At Sigma 3, Greater Noida
 					</span>
-					<h1 class="text-5xl lg:text-7xl font-bold text-white leading-tight">
+					<h1 class="text-6xl lg:text-8xl font-bold text-white leading-tight">
 						Godrej <span class="text-[#B18E4E]">Arden</span>
 					</h1>
 				</div>
 
-				<ul class="flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 text-gray-200 text-lg md:text-xl">
+				<ul class="flex flex-wrap justify-center font-semibold lg:justify-start gap-x-8 gap-y-3 text-gray-100 text-lg md:text-xl">
 					<li class="flex items-center gap-2">
 						<span class="text-[#B18E4E]">●</span> 9.58 Acres
 					</li>

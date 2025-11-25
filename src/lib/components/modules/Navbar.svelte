@@ -1,6 +1,9 @@
 <script module>
 	// Need these for the transitions to work
 	import { fade, fly } from 'svelte/transition';
+	import { onMount } from 'svelte';
+	import PhoneCard from '../cards/phoneCard.svelte';
+	import GeneralModal from '../modals/GeneralModal.svelte';
 </script>
 
 <script>
@@ -11,9 +14,9 @@
 	// Navigation Links
 	const navLinks = [
 		{ name: 'Home', href: '#' },
+		{ name: 'Price List', href: '#pricing' },
 		{ name: 'Overview', href: '#overview' },
 		{ name: 'Amenities', href: '#amenities' },
-		{ name: 'Price List', href: '#pricing' },
 		{ name: 'Gallery', href: '#gallery' },
 		{ name: 'Location', href: '#location' }
 	];
@@ -26,7 +29,7 @@
 	}
 
 	// Svelte 5 way to add window event listener
-	import { onMount } from 'svelte';
+
 	onMount(() => {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
@@ -45,6 +48,34 @@
 	function closeMenu() {
 		isMenuOpen = false;
 		document.body.style.overflow = 'auto';
+	}
+	function smoothScroll(e, href) {
+		e.preventDefault(); // Stop the default "jump"
+
+		// If mobile menu is open, close it
+		if (isMenuOpen) closeMenu();
+
+		// 1. Handle "Home" or empty links
+		if (href === '#' || !href) {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+			return;
+		}
+
+		// 2. Find the target element
+		const targetId = href.replace('#', '');
+		const element = document.getElementById(targetId);
+
+		if (element) {
+			// 3. Calculate position minus the Navbar height (approx 80px-100px)
+			const headerOffset = 100;
+			const elementPosition = element.getBoundingClientRect().top;
+			const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: 'smooth'
+			});
+		}
 	}
 </script>
 
@@ -67,7 +98,7 @@
 					<li>
 						<a
 							href={link.href}
-							class="text-white/90 text-sm font-medium uppercase tracking-wide hover:text-[#B18E4E] transition-colors relative group"
+							class="text-white/90 text-lg font-medium uppercase tracking-wide hover:text-[#B18E4E] transition-colors relative group"
 						>
 							{link.name}
 							<span
@@ -78,26 +109,7 @@
 				{/each}
 			</ul>
 
-			<a
-				href="tel:{phoneNumber}"
-				class="flex items-center gap-2 bg-[#B18E4E] text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-[#9a7a40] transition-all duration-300 shadow-[0_0_15px_rgba(177,142,78,0.4)] hover:scale-105"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="w-4 h-4"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
-					/>
-				</svg>
-				{phoneNumber}
-			</a>
+			<PhoneCard />
 		</div>
 
 		<button
@@ -137,6 +149,8 @@
 </nav>
 
 {#if isMenuOpen}
+	<!-- svelte-ignore a11y_click_events_have_key_events -->
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
 		class="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 md:hidden"
 		onclick={closeMenu}
@@ -164,27 +178,10 @@
 		</div>
 
 		<div class="p-6 bg-black/50 border-t border-white/10">
-			<p class="text-gray-400 text-xs uppercase tracking-widest mb-3 text-center">For Enquiries</p>
-			<a
-				href="tel:{phoneNumber}"
-				class="flex items-center justify-center gap-3 w-full bg-[#B18E4E] text-white py-4 rounded-xl font-bold shadow-lg active:scale-95 transition-transform"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="1.5"
-					stroke="currentColor"
-					class="w-5 h-5"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
-					/>
-				</svg>
-				{phoneNumber}
-			</a>
+			<p class="text-gray-400 text-base uppercase tracking-widest mb-3 text-center">
+				For Enquiries
+			</p>
+			<PhoneCard />
 		</div>
 	</div>
 {/if}
