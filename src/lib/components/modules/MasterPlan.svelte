@@ -1,10 +1,13 @@
 <script>
+	import GeneralModal from "../modals/GeneralModal.svelte";
+
     // Plan Data (Blurred)
 	const plans = [
 		{ label: '2 BHK', desc: 'Compact Luxury' },
 		{ label: '3 BHK', desc: 'Spacious Family Home' },
 		{ label: '4 BHK', desc: 'Grand Residence' }
 	];
+    let openModal = $state(false);
 </script>
 
 <div class="border-t border-white/10 pt-20">
@@ -24,8 +27,13 @@
                 - The image is intentionally blurred to create curiosity.
                 - The 'Lock' icon suggests exclusivity.
             -->
+            <!-- svelte-ignore a11y_click_events_have_key_events -->
+            <!-- svelte-ignore a11y_no_static_element_interactions -->
             <div
-                class="relative group bg-black border border-white/10 rounded-xl overflow-hidden aspect-[4/3] cursor-pointer"
+                class="relative group bg-black border border-white/10 rounded-xl overflow-hidden aspect-4/3 cursor-pointer"
+                onclick={()=>{
+                    openModal=true;
+                }}
             >
                 <!-- The Blurred Image -->
                 <!-- Using a generic floor plan image placeholder -->
@@ -62,7 +70,7 @@
                         </svg>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-white mb-1">{plan.label}</h3>
+                    <h3 class="text-3xl font-bold text-white mb-1">{plan.label}</h3>
                     <p class="text-gray-400 text-sm mb-4">{plan.desc}</p>
 
                     <button
@@ -75,3 +83,9 @@
         {/each}
     </div>
 </div>
+
+{#if openModal}
+<GeneralModal
+isOverlay={true}
+onClose={()=>{openModal=false;}}/>
+{/if}

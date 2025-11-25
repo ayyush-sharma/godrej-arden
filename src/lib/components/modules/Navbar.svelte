@@ -98,7 +98,7 @@
 					<li>
 						<a
 							href={link.href}
-							class="text-white/90 text-lg font-medium uppercase tracking-wide hover:text-[#B18E4E] transition-colors relative group"
+							class="text-white/90 text-base tracking-tight font-medium uppercase hover:text-[#B18E4E] transition-colors relative group"
 						>
 							{link.name}
 							<span
