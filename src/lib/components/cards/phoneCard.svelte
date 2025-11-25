@@ -1,7 +1,8 @@
 <script>
-	import GeneralModal from '../modals/GeneralModal.svelte';
-	const phoneNumber = '+91 98765 43210';
-	let openModal = $state(false);
+
+    import GeneralModal from "../modals/GeneralModal.svelte";
+	const phoneNumber = '+91 99587 20207';
+    let openModal = $state(false);
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
