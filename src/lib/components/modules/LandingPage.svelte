@@ -3,6 +3,7 @@
 
 	// Optional: Define the gold color as a constant or use tailwind config
 	const goldColor = '#B18E4E';
+	let openModal = $state(false);
 </script>
 
 <section class="relative w-full min-h-[80vh] flex items-center bg-gray-900 overflow-hidden">
@@ -68,6 +69,9 @@
 
 				<div class="mt-4">
 					<button
+						onclick={() => {
+							openModal = true;
+						}}
 						class="group relative overflow-hidden rounded-full bg-[#B18E4E] text-white text-lg font-semibold py-4 px-10 transition-all duration-300 hover:bg-[#9a7a40] hover:shadow-[0_0_20px_rgba(177,142,78,0.4)] active:scale-95"
 					>
 						<span class="relative z-10">Download Brochure</span>
@@ -84,3 +88,12 @@
 		</div>
 	</div>
 </section>
+
+{#if openModal}
+	<GeneralModal
+		isOverlay={true}
+		onClose={() => {
+			openModal = false;
+		}}
+	/>
+{/if}

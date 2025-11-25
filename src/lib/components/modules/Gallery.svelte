@@ -1,4 +1,6 @@
 <script>
+	import GeneralModal from "../modals/GeneralModal.svelte";
+
 	// Image Data with Labels for a premium feel
 	const galleryImages = [
 		{
@@ -26,6 +28,7 @@
 			class: 'md:col-span-3 md:row-span-1 h-64 md:h-80'
 		}
 	];
+	let openModal = $state(false);
 </script>
 
 <section class="py-20 bg-[#0f0f0f] relative border-t border-white/5">
@@ -41,6 +44,9 @@
 			</div>
 
 			<button
+				onclick={() => {
+					openModal = true;
+				}}
 				class="group flex items-center gap-3 text-white px-6 py-3 border border-white/20 rounded-full hover:border-[#B18E4E] transition-all duration-300"
 			>
 				<span class="text-sm uppercase tracking-widest">View All Photos</span>
@@ -50,7 +56,13 @@
 
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 			{#each galleryImages as img}
-				<div class={`relative group rounded-2xl overflow-hidden cursor-pointer ${img.class}`}>
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
+				<div 
+				onclick={() => {
+					openModal = true;
+				}}
+				class={`relative group rounded-2xl overflow-hidden cursor-pointer ${img.class}`}>
 					<img
 						src={img.src}
 						alt={img.label}
@@ -102,3 +114,12 @@
 		</div>
 	</div>
 </section>
+
+{#if openModal}
+	<GeneralModal
+		isOverlay={true}
+		onClose={() => {
+			openModal = false;
+		}}
+	/>
+{/if}

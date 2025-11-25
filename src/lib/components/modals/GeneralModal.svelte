@@ -155,7 +155,7 @@
 					class="flex items-center w-full bg-white/5 border border-white/20 rounded-xl overflow-hidden focus-within:border-[#B18E4E] focus-within:bg-black/50 transition-all duration-300"
 				>
 					<span
-						class="pl-4 pr-2 text-gray-400 select-none flex items-center gap-1 border-r border-white/10 h-full bg-black/20"
+						class="pl-4 pr-2 text-gray-400 select-none flex items-center gap-1 border-r border-white/10 h-full "
 					>
 						🇮🇳 +91
 					</span>
@@ -207,6 +207,8 @@
 {/snippet}
 
 {#if isOverlay}
+	<!-- svelte-ignore a11y_click_events_have_key_events -->
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
 		class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md"
 		transition:fade={{ duration: 200 }}
