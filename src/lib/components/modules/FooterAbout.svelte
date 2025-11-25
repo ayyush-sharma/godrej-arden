@@ -104,7 +104,7 @@
 							<p class="text-xs text-gray-500">Registration No UPRERAAGT24588</p>
 						</div>
 					</div>
-					<div class="text-right hidden md:block">
+					<div class="md:text-right block  ">
 						<p class="text-[#B18E4E]">CHAUHAN ESTATE</p>
 						<p class="text-xs text-gray-500">REG NO 09ELXPK8240J1Z8</p>
 					</div>
