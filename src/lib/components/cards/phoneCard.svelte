@@ -1,16 +1,30 @@
 <script>
-    import GeneralModal from "../modals/GeneralModal.svelte";
+	import GeneralModal from '../modals/GeneralModal.svelte';
 	const phoneNumber = '+91 98765 43210';
-    let openModal = $state(false);
-
+	let openModal = $state(false);
 </script>
 
-<a
-    href="#about"
-    onclick={()=>{
-        openModal=true;
-    }}
-	class="flex items-center gap-2 bg-[#B18E4E] text-white px-4 py-2 rounded-full font-extrabold text-xl hover:bg-[#9a7a40] transition-all duration-300 shadow-[0_0_15px_rgba(177,142,78,0.4)] hover:scale-105"
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<div
+	onclick={() => {
+		openModal = true;
+	}}
+	class="
+    flex items-center rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(177,142,78,0.4)] hover:scale-105
+    bg-[#B18E4E] text-white hover:bg-[#9a7a40] font-bold
+    
+    whitespace-nowrap
+    
+  
+    gap-1.5 px-4 py-2 text-xl
+
+   
+    md:gap-2 md:px-3 md:py-2 md:text-xs lg:text-sm
+
+    
+    xl:px-5 xl:py-2.5 xl:text-xl xl:font-extrabold
+"
 >
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
@@ -27,8 +41,12 @@
 		/>
 	</svg>
 	{phoneNumber}
-</a>
+</div>
 {#if openModal}
-<GeneralModal/>
+	<GeneralModal
+		isOverlay={true}
+		onClose={() => {
+			openModal = false;
+		}}
+	/>
 {/if}
-

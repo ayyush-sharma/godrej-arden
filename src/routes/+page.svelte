@@ -37,7 +37,6 @@
 	<section id="location">
 		<NearbyConnectivity />
 	</section>
-	<section id="about">
-		<FooterAbout />
-	</section>
+
+	<FooterAbout />
 </div>
