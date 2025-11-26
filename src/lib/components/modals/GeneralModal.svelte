@@ -66,6 +66,21 @@
 			);
 
 			if (result.success) {
+				// --- GOOGLE ADS CONVERSION TRACKING (START) ---
+                if (typeof gtag !== 'undefined') {
+                    // 1. Fire the Lead Conversion
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-859471494/iwB0CNrZr8cbEIb96ZkD',
+                        'value': 1.0,
+                        'currency': 'INR'
+                    });
+                    const cleanPhone = formData.phone.replace(/[^0-9]/g, '');
+                    gtag('set', 'user_data', {
+                        "email": formData.email,
+                        "phone_number": "+91" + cleanPhone
+                    });
+                }
+                // --- GOOGLE ADS CONVERSION TRACKING (END) ---
 				modalType = 'success';
 				modalMessage = 'Thanks for enquiring! We will call you shortly.';
 				formData = { name: '', email: '', phone: '' };
