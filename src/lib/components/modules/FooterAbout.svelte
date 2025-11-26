@@ -101,12 +101,13 @@
 							<p class="text-white font-semibold">
 								Project Registered under Government of India RERA Act 2016
 							</p>
-							<p class="text-xs text-gray-500">Registration No UPRERAAGT24588</p>
+							<p class="text-xs text-gray-500">Agent Rera : UPRERAAGT24588</p>
 						</div>
 					</div>
 					<div class="md:text-right block  ">
-						<p class="text-[#B18E4E]">CHAUHAN ESTATE</p>
-						<p class="text-xs text-gray-500">REG NO 09ELXPK8240J1Z8</p>
+						<p class="text-[#B18E4E]"><span class="text-gray-700">Advertiser Info:</span> CHAUHAN ESTATE</p>
+						<a href="/agentrera.pdf" target="_blank">
+						<p class="text-xs text-blue-500 underline ">Click To View Channel Partner RERA Certificate</p></a>
 					</div>
 				</div>
 			</div>
@@ -139,7 +140,7 @@
 					to availability. You can expect a call, SMS or emails on details registered with us.
 				</p>
 				<p class="text-[10px] text-gray-700 mt-4 text-center">
-					© {new Date().getFullYear()} Godrej Arden Partner. All Rights Reserved.
+					Authorized Channel Partner For Marketing/ Advertising/ Promoting of Godrej Arden Sigma 3 Project.
 				</p>
 			</div>
 		</div>
